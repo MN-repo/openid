@@ -1,14 +1,7 @@
-from oidcrp.util import add_path
-from oidcrp.util import load_registration_response
+from oidcmsg.util import add_path
+
 from oidcrp.oidc import RP
-
-
-
-def test_add_path():
-    assert add_path('https://example.com/', '/usr') == 'https://example.com/usr'
-    assert add_path('https://example.com/', 'usr') == 'https://example.com/usr'
-    assert add_path('https://example.com', '/usr') == 'https://example.com/usr'
-    assert add_path('https://example.com', 'usr') == 'https://example.com/usr'
+from oidcrp.rp_handler import load_registration_response
 
 
 def test_load_registration_response():
